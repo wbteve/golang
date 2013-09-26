@@ -1,1 +1,1 @@
-ifconfig |grep 'inet' | grep 'broadcast' |awk {'print $2'}
+ifconfig |  grep -v 127 |grep -v  inet6 |grep inet   |awk {'print $2'}
